@@ -29,7 +29,7 @@ def extract_mfcc_with_deltas(file_path, n_mfcc=40, include_delta=True, include_d
         features.append(np.mean(delta2.T, axis=0))
     return np.concatenate(features), mfcc, y, sr
 
-# --- Dataset paths (adjust if needed) ---
+# Dataset paths (adjust if needed)
 animal_dataset = "/kaggle/input/dog-voice-emotion-dataset"
 baby_dataset = "/kaggle/input/baby-crying-sounds-dataset/Baby Crying Sounds"
 
@@ -221,7 +221,7 @@ plt.title('MFCC Heatmap of selected audio file')
 plt.tight_layout()
 plt.show()
 
-# --- Gemma 3n API integration (commented out) ---
+# Gemma 3n API integration (commented out)
 """
 # To enable Gemma 3n explanations, first add your API key to Kaggle Secrets as 'GEMMA3N_API_KEY'
 import os
